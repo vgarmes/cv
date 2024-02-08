@@ -85,6 +85,8 @@ const { title } = Astro.props;
 
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   p {
@@ -94,7 +96,32 @@ const { title } = Astro.props;
     text-wrap: pretty;
   }
 
+  .print {
+    display: none !important;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    .print {
+      display: block !important;
+    }
+
+    astro-dev-toolbar {
+      display: none !important;
+    }
+
+    article {
+      break-inside: avoid;
+    }
+  }
+
   :root {
     --gray-lightest-2: #f7f9fc;
+    --gray-light: #555;
+    --gray-700: #222;
+    --gray-800: #111;
   }
 </style>
