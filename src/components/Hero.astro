@@ -5,7 +5,6 @@ import LinkedIn from "@/icons/LinkedIn.astro";
 import X from "@/icons/X.astro";
 import Mail from "@/icons/Mail.astro";
 import GitHub from "@/icons/GitHub.astro";
-import WorldMap from "@/icons/WorldMap.astro";
 import { basics } from "@cv";
 import type { SocialIcon } from "@/types";
 
@@ -27,8 +26,7 @@ const SOCIAL_ICONS: SocialIcon = {
       <h1>{name}</h1>
       <h2>{label}</h2>
       <span>
-        🇩🇰
-        {city}, {region}
+        🇩🇰 {city}, {region}
       </span>
       <footer>
         {
