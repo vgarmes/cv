@@ -1,0 +1,98 @@
+---
+import { basics, languages } from "@cv";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+import WorldMap from "@/icons/WorldMap.astro";
+import Separator from "./Separator.astro";
+import type { SocialIcon } from "@/types";
+import GitHub from "@/icons/GitHub.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import X from "@/icons/X.astro";
+const { name, image, label, location, email, phone, profiles, summary, url } =
+  basics;
+
+const { city, region } = location;
+
+const contactInfo = [
+  { id: "email", value: email, Icon: Mail },
+  { id: "phone", value: phone, Icon: Phone },
+  { id: "website", value: url, Icon: WorldMap },
+  {
+    id: "location",
+    value: city && region ? `${city}, ${region}` : null,
+    Icon: WorldMap,
+  },
+].filter((x) => Boolean(x.value));
+
+const SOCIAL_ICONS: SocialIcon = {
+  GitHub,
+  LinkedIn,
+  X,
+};
+---
+
+<aside class="w-[30%]">
+  <img class="aspect-video object-cover w-full" src="/profile_large.webp" />
+  <div class="p-4 gap-8 flex flex-col">
+    <div>
+      <h1 class="text-lg font-bold">{name}</h1>
+      <h2 class="text-md font-bold text-indigo-600">Front-end developer</h2>
+    </div>
+    <Separator />
+    <section class="flex flex-col gap-4">
+      {
+        contactInfo.map(({ id, value, Icon }) => (
+          <article class="flex gap-4 items-center">
+            <div class="bg-gray-200 text-gray-500 rounded-full flex items-center justify-center w-8 h-8 shrink-0">
+              <Icon />
+            </div>
+            <div class="contact__info">
+              <h6 class="text-xs text-gray-400 capitalize">{id}</h6>
+              <p class="text-xs text-gray-600 font-medium">{value}</p>
+            </div>
+          </article>
+        ))
+      }
+    </section>
+    <Separator />
+    <section class="flex flex-col gap-4">
+      {
+        profiles.map(({ network, username, url }) => {
+          const Icon = SOCIAL_ICONS[network];
+          return (
+            <article class="flex gap-4 items-center">
+              <div class="bg-gray-200 text-gray-500 rounded-full flex items-center justify-center w-8 h-8 shrink-0">
+                <Icon />
+              </div>
+              <div class="contact__info">
+                <h6 class="text-xs text-gray-400 capitalize">{network}</h6>
+                <a
+                  href={url}
+                  title={`Visit my profile ${name} at ${network}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs text-gray-600 font-medium block"
+                >
+                  {username}
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </section>
+    <Separator />
+    <section class="flex flex-col gap-4">
+      {
+        languages.map(({ language, fluency }) => (
+          <div class="contact__info">
+            <h6 class="text-xs text-gray-600 font-medium capitalize">
+              {language}
+            </h6>
+            <p class="text-xs text-gray-400 font-medium">{fluency}</p>
+          </div>
+        ))
+      }
+    </section>
+  </div>
+</aside>
