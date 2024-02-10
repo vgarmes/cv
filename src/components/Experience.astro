@@ -5,7 +5,7 @@ import { work } from "@cv";
 ---
 
 <Section title="Experience">
-  <ul>
+  <ul class="flex flex-col gap-8">
     {
       work.map(
         ({ name, startDate, endDate, position, summary, highlights, url }) => {
@@ -17,22 +17,34 @@ import { work } from "@cv";
           return (
             <li>
               <article>
-                <header>
-                  <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
+                <header class="flex flex-col space-y-1.5">
+                  <div class="flex items-center justify-between gap-x-2 text-base">
+                    <h3 class="font-semibold leading-none">
+                      <a
+                        href={url}
+                        title={`Ver ${name}`}
+                        target="_blank"
+                        class="hover:underline"
+                      >
                         {name}
                       </a>
                     </h3>
-                    <h4>{position}</h4>
-                  </div>
 
-                  <time>{years}</time>
+                    <time class="text-sm tabular-nums text-gray-500">
+                      {years}
+                    </time>
+                  </div>
+                  <h4 class="font-mono text-sm leading-none">{position}</h4>
                 </header>
 
-                <footer>
-                  <p>{summary}</p>
-                </footer>
+                <p class="mt-2 text-xs">{summary}</p>
+                {highlights.length > 0 && (
+                  <ul class="text-xs text-gray-500 font-mono mt-2 list-disc pl-4">
+                    {highlights.map((highlight) => (
+                      <li>{highlight}</li>
+                    ))}
+                  </ul>
+                )}
               </article>
             </li>
           );
@@ -41,48 +53,3 @@ import { work } from "@cv";
     }
   </ul>
 </Section>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article a {
-    color: #111;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

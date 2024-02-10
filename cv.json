@@ -36,29 +36,43 @@
   "work": [
     {
       "name": "ComplyCloud",
+      "position": "Full-Stack Developer",
+      "url": "www.complycloud.com",
+      "startDate": "2024-01-01",
+      "endDate": null,
+      "summary": "I transitioned from a pure Front-End role into working with the Full-Stack, developing features from end to end using C# and .NET framework in the backend",
+      "highlights": []
+    },
+    {
+      "name": "ComplyCloud",
       "position": "Front-End Developer",
       "url": "www.complycloud.com",
       "startDate": "2021-12-01",
-      "endDate": null,
-      "summary": "",
-      "highlights": ["First highlight"]
+      "endDate": "2024-01-01",
+      "summary": "I worked on several key features as well as led initiatives to enhance our web application's functionality built in Next.js. Some of these initiatives include developing a comprehensive library of React components aligned with our design system, overhauling the authentication on the client using AWS services, and transitioning email notifications to styled templates to boost customer engagement. Additionally, I modernized our client-server state synchronization with React Query, resulting in improved performance and developer experience.",
+      "highlights": []
     },
     {
       "name": "Freelance developer",
       "position": "Lead Frontend Architect",
       "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "startDate": "2021-11-01",
+      "endDate": "2020-08-01",
+      "summary": "Collaborated with a local store with their marketing and e-commerce using Adobe Commerce (Magento) as the CMS and CRM, while concurrently expanding my education in web development through relevant courses and bootcamps.",
+      "highlights": []
     },
     {
       "name": "European Energy",
       "position": "Operations Engineer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
+      "startDate": "2017-11-01",
+      "endDate": "2019-06-01",
       "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "highlights": [
+        "Managed the day-to-day operations of solar power plants across Europe, maintaining close communication with O&M providers.",
+        "Evaluated and supervised preventive and corrective maintenance activities.",
+        "Facilitated the submission of required documentation to regulatory bodies.",
+        "Oversaw insurance claims processes."
+      ]
     },
     {
       "name": "GreenGo Energy",
@@ -66,13 +80,13 @@
       "startDate": "2011-03-01",
       "endDate": "2014-05-01",
       "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "highlights": []
     }
   ],
   "volunteer": [
     {
-      "organization": "Organization",
-      "position": "Volunteer",
+      "organization": "Nordic Games",
+      "position": "Games Playtester",
       "url": "https://organization.com/",
       "startDate": "2012-01-01",
       "endDate": "2013-01-01",
@@ -84,12 +98,22 @@
     {
       "institution": "Universitat Politecnica de Catalunya",
       "url": "https://www.upc.edu/portal/es/index.html",
-      "area": "Software Engineer",
-      "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "area": "Energy Engineering",
+      "studyType": "Master's Degree",
+      "startDate": "2011-09-01",
+      "endDate": "2013-06-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Universitat Politecnica de Catalunya",
+      "url": "https://www.upc.edu/portal/es/index.html",
+      "area": "Electrical Engineering",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2007-09-01",
+      "endDate": "2011-06-01",
+      "score": "",
+      "courses": []
     }
   ],
   "awards": [
@@ -198,11 +222,19 @@
     {
       "language": "English",
       "fluency": "Advanced"
+    },
+    {
+      "language": "Danish",
+      "fluency": "Conversational"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
+      "name": "Gaming",
+      "keywords": ["Ferrets", "Unicorns"]
+    },
+    {
+      "name": "Gaming",
       "keywords": ["Ferrets", "Unicorns"]
     }
   ],
