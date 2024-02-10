@@ -56,11 +56,11 @@ const profilesInfo = profiles.map(({ network, url }) => {
 });
 ---
 
-<footer id="normal-footer" class="no-print">
+<footer id="normal-footer" class="print:hidden">
   Press <kbd>Cmd</kbd> + <kbd>K</kbd> to open the command palette.
 </footer>
 
-<div id="footer-button" class="no-print">
+<div id="footer-button" class="print:hidden">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     class="icon icon-tabler icon-tabler-command"
@@ -83,7 +83,8 @@ const profilesInfo = profiles.map(({ network, url }) => {
 <ninja-keys
   data-info={JSON.stringify(profilesInfo)}
   placeholder="Buscar comando"
-  hideBreadcrumbs></ninja-keys>
+  hideBreadcrumbs
+  class="print:hidden"></ninja-keys>
 
 <script>
   import "ninja-keys";
@@ -153,12 +154,6 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </script>
 
 <style>
-  @media print {
-    ninja-keys {
-      display: none !important;
-    }
-  }
-
   @keyframes fadeIn {
     from {
       opacity: 0;

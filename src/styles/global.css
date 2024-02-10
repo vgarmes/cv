@@ -4,7 +4,7 @@
 
 @layer base {
   p {
-    @apply text-gray-500 text-xs leading-6 text-pretty;
+    @apply text-gray-600 text-sm leading-6 text-pretty font-mono;
   }
 }
 p,
@@ -22,20 +22,7 @@ article {
   break-inside: avoid;
 }
 
-/* Styles for printing */
-.print {
-  display: none !important;
-}
-
 @media print {
-  .no-print {
-    display: none !important;
-  }
-
-  .print {
-    display: block !important;
-  }
-
   astro-dev-toolbar {
     display: none !important;
   }

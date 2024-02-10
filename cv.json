@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Victor Garcia Mestre",
-    "label": "Full-Stack developer with more than 3 years of experience",
+    "label": "Full Stack developer who loves crafting great web experiences ✨ and exploring bleeding-edge technologies.",
     "image": "/profile.webp",
     "email": "vgmestre@gmail.com",
     "phone": "",
@@ -12,7 +12,8 @@
       "postalCode": "2200",
       "city": "Copenhagen",
       "countryCode": "DK",
-      "region": "Denmark"
+      "region": "Denmark",
+      "url": "https://www.google.com/maps/place/Copenhagen"
     },
     "profiles": [
       {

@@ -7,11 +7,12 @@ import Mail from "@/icons/Mail.astro";
 import GitHub from "@/icons/GitHub.astro";
 import { basics } from "@cv";
 import type { SocialIcon } from "@/types";
+import IconButton from "./IconButton.astro";
 
 const { name, image, label, location, email, phone, profiles, summary, url } =
   basics;
 
-const { city, region } = location;
+const { city, region, url: locationUrl } = location;
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
@@ -22,65 +23,58 @@ const SOCIAL_ICONS: SocialIcon = {
 const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
 const linkedUrl = linkedInfo?.url;
 
-const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+const printInfo = [email, phone, linkedUrl].filter(Boolean);
 ---
 
 <Section>
   <div class="container">
     <div class="info">
-      <h1 class="text-3xl font-bold">{name}</h1>
-      <h2>{label}</h2>
-      <span>
+      <h1 class="text-2xl font-bold">{name}</h1>
+      <p class="text-balance">{label}</p>
+      <a
+        class="text-xs text-gray-600 font-mono hover:underline leading-none align-baseline"
+        href={locationUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         🇩🇰 {city}, {region}
-      </span>
-      <footer class="print">
-        {printInfo}
+      </a>
+      <footer class="hidden print:flex gap-x-1 font-mono text-sm text-gray-600">
+        {printInfo.map((item) => <span class="underline">{item}</span>)}
       </footer>
-      <footer class="no-print">
+      <footer class="print:hidden flex gap-x-1 pt-1 font-mono text-sm">
         {
           email && (
-            <a
-              href={`mailto:${email}`}
-              title="Drop me an email"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <IconButton link={`mailto:${email}`}>
               <Mail />
-            </a>
+            </IconButton>
           )
         }
         {
           phone && (
-            <a
-              href={`tel:${phone}`}
-              title={`Call ${name} on ${phone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <IconButton link={`tel:${phone}`}>
               <Phone />
-            </a>
+            </IconButton>
           )
         }
         {
           profiles.map(({ network, url, username }) => {
             const Icon = SOCIAL_ICONS[network];
-
             return (
-              <a
-                href={url}
-                title={`Visitar el perfil de ${name} en ${network}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <IconButton link={url}>
                 <Icon />
-              </a>
+              </IconButton>
             );
           })
         }
       </footer>
     </div>
-    <figure>
-      <img src={image} alt={name} />
+    <figure class="relative flex shrink-0 overflow-hidden rounded-xl size-28">
+      <img
+        class="aspect-square h-full w-full object-cover"
+        src={image}
+        alt={name}
+      />
     </figure>
   </div>
 </Section>
@@ -101,55 +95,6 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     padding-right: 32px;
   }
 
-  h2 {
-    color: #444;
-    font-weight: 500;
-    font-size: 1.1rem;
-    text-wrap: balance;
-  }
-
-  img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    width: 128px;
-    border-radius: 16px;
-  }
-
-  span {
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.85rem;
-    letter-spacing: -0.05rem;
-  }
-
-  footer {
-    color: #555;
-    font-size: 0.65rem;
-    display: flex;
-    gap: 4px;
-    margin-top: 8px;
-  }
-
-  footer a {
-    color: #777;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee;
-    padding: 4px;
-    height: 32px;
-    width: 32px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-  }
-
-  footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
-  }
-
   @media (width <= 700px) {
     .container {
       flex-direction: column-reverse;
@@ -160,20 +105,6 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
       align-items: center;
       padding-right: 0;
       text-align: center;
-    }
-
-    figure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h2 {
-      text-wrap: balance;
-    }
-
-    figure {
-      margin: 0 auto;
     }
   }
 </style>
