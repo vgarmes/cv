@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  p {
+    @apply text-gray-500 text-xs leading-6 text-pretty;
+  }
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Avoids splitting in different pages */
+article {
+  break-inside: avoid;
+}
+
+/* Styles for printing */
 .print {
   display: none !important;
 }
@@ -17,9 +38,5 @@
 
   astro-dev-toolbar {
     display: none !important;
-  }
-
-  article {
-    break-inside: avoid;
   }
 }
