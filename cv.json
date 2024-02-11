@@ -41,7 +41,8 @@
       "startDate": "2024-01-01",
       "endDate": null,
       "summary": "I transitioned from a pure Front-End role into working with the Full-Stack, developing features from end to end using C# and .NET framework in the backend",
-      "highlights": []
+      "highlights": [],
+      "skills": ["C#", ".NET", "NoSQL"]
     },
     {
       "name": "ComplyCloud",
@@ -50,7 +51,8 @@
       "startDate": "2021-12-01",
       "endDate": "2024-01-01",
       "summary": "I worked on several key features as well as led initiatives to enhance our web application's functionality built in Next.js. Some of these initiatives include developing a comprehensive library of React components aligned with our design system, overhauling the authentication on the client using AWS services, and transitioning email notifications to styled templates to boost customer engagement. Additionally, I modernized our client-server state synchronization with React Query, resulting in improved performance and developer experience.",
-      "highlights": []
+      "highlights": [],
+      "skills": ["React", "Next.js", "Typescript"]
     },
     {
       "name": "Freelance developer",
@@ -59,7 +61,8 @@
       "startDate": "2021-11-01",
       "endDate": "2020-08-01",
       "summary": "Collaborated with a local store with their marketing and e-commerce using Adobe Commerce (Magento) as the CMS and CRM, while concurrently expanding my education in web development through relevant courses and bootcamps.",
-      "highlights": []
+      "highlights": [],
+      "skills": []
     },
     {
       "name": "European Energy",
@@ -72,7 +75,8 @@
         "Evaluated and supervised preventive and corrective maintenance activities.",
         "Facilitated the submission of required documentation to regulatory bodies.",
         "Oversaw insurance claims processes."
-      ]
+      ],
+      "skills": []
     },
     {
       "name": "GreenGo Energy",
@@ -80,18 +84,19 @@
       "startDate": "2011-03-01",
       "endDate": "2014-05-01",
       "summary": "Description…",
-      "highlights": []
+      "highlights": [],
+      "skills": ["Python", "SQL"]
     }
   ],
   "volunteer": [
     {
-      "organization": "Nordic Games",
-      "position": "Games Playtester",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "organization": "Nordisk Games",
+      "position": "Game Playester",
+      "url": "https://www.nordiskgames.com/",
+      "startDate": "2021-02-01",
+      "endDate": "2021-12-01",
+      "summary": "Volunteered as a Game Playtester, participating in recurring playtest sessions to provide feedback for game development purposes. Contributed insights and observations to assist in refining game mechanics, identifying bugs, and enhancing user experience.",
+      "skills": []
     }
   ],
   "education": [
@@ -246,51 +251,28 @@
   ],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "Game Lib",
       "isActive": true,
-      "description": "Interactive story with programming challenges to travel to Mars",
-      "highlights": ["Choose your own adventure", "In progress"],
-      "url": "https://mars.codes"
+      "description": "A web app I made to keep track of my videogame collection",
+      "highlights": ["Next.js", "next-auth", "tRPC"],
+      "url": "https://game-lib.vercel.app/",
+      "github": ""
     },
     {
-      "name": "AdventJS",
+      "name": "My Steam",
       "isActive": true,
-      "description": "JavaScript programming challenges for every day of December until Christmas",
-      "highlights": [
-        "+1 million visits",
-        "Multilanguage",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://advent.js/dev"
+      "description": "An API of your Steam statistics easily deployable to a Cloudflare Worker.",
+      "highlights": ["Clodflare Worker", "Hono"],
+      "url": "https://github.com/vgarmes/my-steam",
+      "github": ""
     },
     {
-      "name": "Codember",
+      "name": "Markdown Editor",
       "isActive": true,
-      "description": "Interactive programming game with challenges and secrets",
-      "highlights": ["+2000 active users", "Challenges for any language"],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground of HTML, CSS and JavaScript code for sharing",
-      "highlights": ["100k monthly visit", "Developed by the community"],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "List of technical tests of companies to practice programming",
-      "highlights": ["100% free", "+500 community solutions"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Streaming programming conference for the Spanish-speaking community with top talks",
-      "highlights": ["+15k tickets handed over", "+50k live viewers"],
-      "url": "https://miduconf.com"
+      "description": "A markdown editor written made with Electron",
+      "highlights": ["Electron", "Vite", "React"],
+      "url": "https://github.com/vgarmes/markdown-editor",
+      "github": ""
     }
   ]
 }

@@ -1,5 +1,6 @@
 ---
-import Section from "./Section.astro";
+import Section from "../Section.astro";
+import Tag from "@/components/ui/Tag.astro";
 
 import { work } from "@cv";
 ---
@@ -8,7 +9,16 @@ import { work } from "@cv";
   <ul class="flex flex-col gap-8">
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({
+          name,
+          startDate,
+          endDate,
+          position,
+          summary,
+          highlights,
+          url,
+          skills,
+        }) => {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
             endDate != null ? new Date(endDate).getFullYear() : "Present";
@@ -44,6 +54,13 @@ import { work } from "@cv";
                       <li>{highlight}</li>
                     ))}
                   </ul>
+                )}
+                {skills.length > 0 && (
+                  <div class="mt-2 flex flex-wrap gap-1">
+                    {skills.map((skill) => (
+                      <Tag>{skill}</Tag>
+                    ))}
+                  </div>
                 )}
               </article>
             </li>

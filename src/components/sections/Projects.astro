@@ -1,0 +1,50 @@
+---
+import GitHub from "@/icons/GitHub.astro";
+import Section from "../Section.astro";
+import Tag from "../ui/Tag.astro";
+
+import { projects } from "@cv";
+---
+
+<Section title="Projects">
+  <div
+    class="grid grid-cols-1 gap-3 -mx-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
+  >
+    {
+      projects.map(
+        ({ url, description, highlights, name, isActive, github }) => {
+          return (
+            <article class="rounded-lg flex flex-col overflow-hidden border border-gray-300 p-3">
+              <header class="flex flex-col space-y-1.5">
+                <h3 class="font-semibold tracking-tight text-base">
+                  <a
+                    href={url}
+                    target="_blank"
+                    title={`See ${name} project`}
+                    class="inline-flex items-center gap-1 hover:underline"
+                  >
+                    {name}
+                    {isActive && (
+                      <span class="size-1 rounded-full bg-green-500" />
+                    )}
+                  </a>
+                </h3>
+                <div class="hidden font-mono text-xs underline print:visible">
+                  {url}
+                </div>
+                <p class="text-xs">{description}</p>
+              </header>
+              <footer class="mt-auto flex text-pretty">
+                <div class="mt-2 flex flex-wrap gap-1">
+                  {highlights.map((highlight) => {
+                    return <Tag>{highlight}</Tag>;
+                  })}
+                </div>
+              </footer>
+            </article>
+          );
+        },
+      )
+    }
+  </div>
+</Section>
