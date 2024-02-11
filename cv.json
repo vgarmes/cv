@@ -40,16 +40,21 @@
       "url": "www.complycloud.com",
       "startDate": "2021-12-01",
       "endDate": null,
-      "summary": "I worked on several key features as well as led initiatives to enhance our web application's functionality built in Next.js. Some of these initiatives include developing a comprehensive library of React components aligned with our design system, overhauling the authentication on the client using AWS services, and transitioning email notifications to styled templates to boost customer engagement. Additionally, I modernized our client-server state synchronization with React Query, resulting in improved performance and developer experience.",
-      "highlights": [],
+      "summary": "Worked on several key features in our web application built with Next.js. Recently, I've transitioned into a full-stack position where I've taken on the responsibility of developing the backend using .NET framework. This shift has allowed me to take ownership of features from conception to deployment, ensuring seamless integration and end-to-end functionality. I also led some initiatives to improve the overall performance and developer experience such as:",
+      "highlights": [
+        "Revamped our client-server state synchronization with React Query.",
+        "Overhauling the authentication on the client side using AWS services.",
+        "Developing a comprehensive library of React styled components aligned with our design system.",
+        "Transitioning email notifications to styled templates to boost customer engagement."
+      ],
       "skills": ["React", "Next.js", "Typescript", "C#", ".NET", "NoSQL"]
     },
     {
-      "name": "Freelance developer",
-      "position": "Lead Frontend Architect",
+      "name": "Freelance",
+      "position": "Front-End Developer",
       "url": "https://twitch.tv/midudev",
-      "startDate": "2021-11-01",
-      "endDate": "2020-08-01",
+      "startDate": "2020-08-01",
+      "endDate": "2021-11-01",
       "summary": "Collaborated with a local store with their marketing and e-commerce using Adobe Commerce (Magento) as the CMS and CRM, while concurrently expanding my education in web development through relevant courses and bootcamps.",
       "highlights": [],
       "skills": []

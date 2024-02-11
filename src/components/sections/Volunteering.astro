@@ -1,4 +1,5 @@
 ---
+import { formatDates } from "@/utils/date";
 import Section from "../Section.astro";
 import { volunteer } from "@cv";
 ---
@@ -8,10 +9,7 @@ import { volunteer } from "@cv";
     {
       volunteer.map(
         ({ organization, url, position, startDate, endDate, summary }) => {
-          const startYear = new Date(startDate).getFullYear();
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present";
-          const years = `${startYear} - ${endYear}`;
+          const dates = formatDates(startDate, endDate);
           return (
             <article>
               <header class="flex flex-col space-y-1.5">
@@ -27,8 +25,8 @@ import { volunteer } from "@cv";
                     </a>
                   </h3>
 
-                  <time class="text-sm tabular-nums text-gray-500">
-                    {years}
+                  <time class="text-xs uppercase tabular-nums text-gray-500">
+                    {dates}
                   </time>
                 </div>
                 <h4 class="font-mono text-sm leading-none">{position}</h4>

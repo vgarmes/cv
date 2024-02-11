@@ -3,6 +3,7 @@ import Section from "../Section.astro";
 import Tag from "@/components/ui/Tag.astro";
 
 import { work } from "@cv";
+import { formatDates } from "@/utils/date";
 ---
 
 <Section title="Experience">
@@ -19,11 +20,7 @@ import { work } from "@cv";
           url,
           skills,
         }) => {
-          const startYear = new Date(startDate).getFullYear();
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present";
-          const years = `${startYear} - ${endYear}`;
-
+          const dates = formatDates(startDate, endDate);
           return (
             <li>
               <article>
@@ -40,8 +37,8 @@ import { work } from "@cv";
                       </a>
                     </h3>
 
-                    <time class="text-sm tabular-nums text-gray-500">
-                      {years}
+                    <time class="text-xs uppercase tabular-nums text-gray-500">
+                      {dates}
                     </time>
                   </div>
                   <h4 class="font-mono text-sm leading-none">{position}</h4>
