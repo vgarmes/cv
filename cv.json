@@ -4,9 +4,9 @@
     "label": "Full Stack developer who loves crafting great web experiences ✨ and exploring bleeding-edge technologies.",
     "image": "/profile.webp",
     "email": "vgmestre@gmail.com",
-    "phone": "",
+    "phone": "+45 34 ",
     "url": "https://vgarmes.github.io",
-    "summary": "Passionate web developer with a background in Electrical Engineering. My journey into web development began when I helped create a solar power monitoring application at a startup. Inspired by this experience, I made the decision to transition from electrical engineering to web development and haven't looked back since. I am a driven and diligent problem-solver with a strong interest incontinuous learning and self-improvement.",
+    "summary": "Passionate web developer with a background in Electrical Engineering. My journey into web development began when I helped create a solar power monitoring application at a startup. Inspired by this experience, I made the decision to transition from electrical engineering to web development and haven't looked back since. I am a driven and diligent problem-solver with a strong interest in continuous learning and self-improvement.",
     "location": {
       "address": "",
       "postalCode": "2200",
@@ -40,7 +40,7 @@
       "url": "www.complycloud.com",
       "startDate": "2021-12-01",
       "endDate": null,
-      "summary": "Worked on several key features in our web application built with Next.js. Recently, I've transitioned into a full-stack position where I've taken on the responsibility of developing the backend using .NET framework. This shift has allowed me to take ownership of features from conception to deployment, ensuring seamless integration and end-to-end functionality. I also led some initiatives to improve the overall performance and developer experience such as:",
+      "summary": "Worked on several key features in our web application built with Next.js. Recently, I've transitioned into a full-stack position where I've taken on the responsibility of developing the backend using the .NET framework. This shift has allowed me to take ownership of features from conception to deployment, having full control on the end-to-end functionality. I also led some initiatives to improve the overall performance and developer experience such as:",
       "highlights": [
         "Revamped our client-server state synchronization with React Query.",
         "Overhauling the authentication on the client side using AWS services.",
@@ -64,13 +64,8 @@
       "position": "Operations Engineer",
       "startDate": "2017-11-01",
       "endDate": "2019-06-01",
-      "summary": "Description…",
-      "highlights": [
-        "Managed the day-to-day operations of solar power plants across Europe, maintaining close communication with O&M providers.",
-        "Evaluated and supervised preventive and corrective maintenance activities.",
-        "Facilitated the submission of required documentation to regulatory bodies.",
-        "Oversaw insurance claims processes."
-      ],
+      "summary": "Managed the day-to-day operations of solar power plants across Europe, maintaining close communication with O&M providers. Additionaly, I had the responsibility of evaluating and supervising preventive and corrective maintenance activities, handling insurance claims processes and facilitating the submission of required documentation to regulatory bodies.",
+      "highlights": [],
       "skills": []
     },
     {
@@ -78,7 +73,7 @@
       "position": "Service and R&D Engineer",
       "startDate": "2011-03-01",
       "endDate": "2014-05-01",
-      "summary": "Description…",
+      "summary": "",
       "highlights": [
         "Developed Python-based backend solutions to continuously monitor the condition of solar power plants, aggregating extensive datasets and calculating critical performance metrics for failure detection and diagnosis.",
         "Maintained the SQL database responsible for storing monitored data and plant specifications, ensuring data accuracy and accessibility.",
@@ -86,7 +81,7 @@
         "Managed technical documentation and coordinated warranty claims with equipment manufacturers, ensuring timely resolution of issues.",
         "Took charge of technical customer support, delivering assistance and solutions to meet customer needs."
       ],
-      "skills": ["Python", "SQL"]
+      "skills": ["Python", "SQL", "Data Analysis"]
     }
   ],
   "volunteer": [
@@ -102,10 +97,10 @@
   ],
   "education": [
     {
-      "institution": "Universitat Politecnica de Catalunya",
+      "institution": "Universitat Politecnica de Catalunya / Aalborg Universitet",
       "url": "https://www.upc.edu/portal/es/index.html",
-      "area": "Energy Engineering",
-      "studyType": "Master's Degree",
+      "area": "MSc in Energy Engineering",
+      "studyType": "",
       "startDate": "2011-09-01",
       "endDate": "2013-06-01",
       "score": "",
@@ -114,8 +109,8 @@
     {
       "institution": "Universitat Politecnica de Catalunya",
       "url": "https://www.upc.edu/portal/es/index.html",
-      "area": "Electrical Engineering",
-      "studyType": "Bachelor's Degree",
+      "area": "BSc in Electrical Engineering",
+      "studyType": "",
       "startDate": "2007-09-01",
       "endDate": "2011-06-01",
       "score": "",
@@ -263,7 +258,7 @@
       "name": "My Steam",
       "isActive": true,
       "description": "An API of your Steam statistics easily deployable to a Cloudflare Worker.",
-      "highlights": ["Clodflare Worker", "Hono"],
+      "highlights": ["Cloudflare Workers", "Hono", "Node.js"],
       "url": "https://github.com/vgarmes/my-steam",
       "github": ""
     },

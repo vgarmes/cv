@@ -1,5 +1,5 @@
 ---
-import Section from "../Section.astro";
+import Section from "@/components/Section.astro";
 import Phone from "@/icons/Phone.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import X from "@/icons/X.astro";
@@ -7,10 +7,10 @@ import Mail from "@/icons/Mail.astro";
 import GitHub from "@/icons/GitHub.astro";
 import { basics } from "@cv";
 import type { SocialIcon } from "@/types";
-import IconButton from "../ui/IconButton.astro";
+import IconButton from "@/components/ui/IconButton.astro";
+import WorldMap from "@/icons/WorldMap.astro";
 
-const { name, image, label, location, email, phone, profiles, summary, url } =
-  basics;
+const { name, image, label, location, email, phone, profiles, url } = basics;
 
 const { city, region, url: locationUrl } = location;
 
@@ -20,15 +20,16 @@ const SOCIAL_ICONS: SocialIcon = {
   X,
 };
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
-const linkedUrl = linkedInfo?.url;
-
-const printInfo = [email, phone, linkedUrl].filter(Boolean);
+const printInfo = [email, phone, url].filter(Boolean);
 ---
 
 <Section>
-  <div class="container">
-    <div class="info">
+  <div
+    class="flex justify-between gap-4 items-center sm:flex-row sm:items-start flex-col-reverse"
+  >
+    <div
+      class="flex flex-col items-center sm:items-start gap-2 pr-0 sm:pr-8 text-center sm:text-start"
+    >
       <h1 class="text-2xl font-bold">{name}</h1>
       <p class="text-balance">{label}</p>
       <a
@@ -39,29 +40,57 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean);
       >
         🇩🇰 {city}, {region}
       </a>
-      <footer class="hidden print:flex gap-x-1 font-mono text-sm text-gray-600">
-        {printInfo.map((item) => <span class="underline">{item}</span>)}
-      </footer>
+      <div
+        class="hidden flex-col print:flex print:mt-2 gap-x-1 font-mono text-sm text-gray-600"
+      >
+        <a
+          href={`mailto:${email}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-x-2"
+        >
+          <Mail />
+          <span>{email}</span>
+        </a>
+        <a
+          href={`tel:${phone}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-x-2"
+        >
+          <Phone />
+          <span>{phone}</span>
+        </a>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-x-2"
+        >
+          <WorldMap />
+          <span>{url}</span>
+        </a>
+      </div>
       <footer class="print:hidden flex gap-x-1 pt-1 font-mono text-sm">
         {
           email && (
-            <IconButton link={`mailto:${email}`}>
+            <IconButton link={`mailto:${email}`} title="Email">
               <Mail />
             </IconButton>
           )
         }
         {
           phone && (
-            <IconButton link={`tel:${phone}`}>
+            <IconButton link={`tel:${phone}`} title="Phone number">
               <Phone />
             </IconButton>
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
+          profiles.map(({ network, url }) => {
             const Icon = SOCIAL_ICONS[network];
             return (
-              <IconButton link={url}>
+              <IconButton link={url} title={network}>
                 <Icon />
               </IconButton>
             );
@@ -78,33 +107,3 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean);
     </figure>
   </div>
 </Section>
-
-<style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-right: 32px;
-  }
-
-  @media (width <= 700px) {
-    .container {
-      flex-direction: column-reverse;
-    }
-
-    .info {
-      justify-content: center;
-      align-items: center;
-      padding-right: 0;
-      text-align: center;
-    }
-  }
-</style>

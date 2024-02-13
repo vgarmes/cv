@@ -1,0 +1,40 @@
+---
+import Section from "@/components/Section.astro";
+import { formatDates } from "@/utils/date";
+import { education } from "@cv";
+---
+
+<Section title="Education">
+  <div class="flex flex-col gap-8">
+    {
+      education.map(
+        ({ institution, area, studyType, startDate, endDate, url }) => {
+          const dates = formatDates(startDate, endDate);
+          return (
+            <article>
+              <header class="flex flex-col space-y-1.5">
+                <div class="flex items-center justify-between gap-x-2 text-base">
+                  <h3 class="font-semibold leading-none">{area}</h3>
+
+                  <time class="text-xs uppercase tabular-nums text-gray-500">
+                    {dates}
+                  </time>
+                </div>
+                <h4 class="font-mono text-sm leading-none">
+                  <a
+                    href={url}
+                    title={`See ${institution}`}
+                    target="_blank"
+                    class="hover:underline"
+                  >
+                    {institution}
+                  </a>
+                </h4>
+              </header>
+            </article>
+          );
+        },
+      )
+    }
+  </div>
+</Section>
