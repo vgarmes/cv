@@ -1,0 +1,24 @@
+---
+import Section from "@/components/Section.astro";
+import CodeIcon from "@/icons/Code.astro";
+import MessageIcon from "@/icons/Message.astro";
+---
+
+<Section title="Skills">
+  <div class="flex flex-col gap-3">
+    <article>
+      <div class="flex items-center gap-2 mb-1">
+        <CodeIcon class="size-4" />
+        <h3 class="font-semibold leading-none">Technical skills</h3>
+      </div>
+      <p>Typescript, React, Next.js, Astro, Node.js, C#, .NET</p>
+    </article>
+  </div>
+  <article>
+    <div class="flex items-center gap-2 mb-1">
+      <MessageIcon class="size-4" />
+      <h3 class="font-semibold leading-none">Language</h3>
+    </div>
+    <p>Native Spanish, fluent in English, intermediate in Danish</p>
+  </article>
+</Section>

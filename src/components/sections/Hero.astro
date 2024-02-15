@@ -38,10 +38,10 @@ const printInfo = [email, phone, url].filter(Boolean);
         target="_blank"
         rel="noopener noreferrer"
       >
-        🇩🇰 {city}, {region}
+        {city}, {region}
       </a>
       <div
-        class="hidden flex-col print:flex print:mt-2 gap-x-1 font-mono text-sm text-gray-600"
+        class="hidden flex-col print:flex print:mt-2 gap-y-1 font-mono text-sm text-gray-600"
       >
         <a
           href={`mailto:${email}`}
