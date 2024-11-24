@@ -35,19 +35,32 @@
   },
   "work": [
     {
+      "name": "Sybo Games",
+      "position": "Senior Frontend Developer",
+      "url": "www.sybogames.com",
+      "startDate": "2024-06-01",
+      "endDate": null,
+      "summary": "Developing web tools to support live operations of games.",
+      "highlights": [
+        "Modernized the UI by implementing a custom theme on top of Material UI",
+        "Revamped the client-server state synchronization with React Query and Connect RPC"
+      ],
+      "skills": ["React", "Next.js", "Typescript", "Go"]
+    },
+    {
       "name": "ComplyCloud",
-      "position": "Front-End Developer",
+      "position": "Frontend Developer",
       "url": "www.complycloud.com",
       "startDate": "2021-12-01",
-      "endDate": null,
+      "endDate": "2024-05-31",
       "summary": "Worked on several key features in our web application built with Next.js. Recently, I've transitioned into a full-stack position where I've taken on the responsibility of developing the backend using the .NET framework. This shift has allowed me to take ownership of features from conception to deployment, having full control on the end-to-end functionality. I also led some initiatives to improve the overall performance and developer experience such as:",
       "highlights": [
-        "Revamped our client-server state synchronization with React Query.",
+        "Revamped the client-server state synchronization with React Query.",
         "Overhauling the authentication on the client side using AWS services.",
         "Developing a comprehensive library of React styled components aligned with our design system.",
         "Transitioning email notifications to styled templates to boost customer engagement."
       ],
-      "skills": ["React", "Next.js", "Typescript", "C#", ".NET", "NoSQL"]
+      "skills": ["React", "Next.js", "Typescript", "C#", ".NET"]
     },
     {
       "name": "Freelance",
