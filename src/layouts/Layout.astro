@@ -1,5 +1,6 @@
 ---
 import { basics } from "@cv";
+import { Font } from "astro:assets";
 import "@/styles/global.css";
 
 interface Props {
@@ -20,6 +21,8 @@ const { image, summary } = basics;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="image" href={image} />
     <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-geist" preload />
+    <Font cssVariable="--font-geist-mono" preload />
   </head>
   <body>
     <slot />
