@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Victor Garcia Mestre",
-    "label": "Full Stack developer who loves crafting great web experiences ✨ and exploring bleeding-edge technologies.",
-    "image": "/profile.webp",
+    "label": "Frontend Engineer",
+    "image": "/profile.jpeg",
     "email": "vgmestre@gmail.com",
     "phone": "+45 24 79 34 48",
     "url": "https://vgarmes.github.io",
-    "summary": "Passionate web developer with a background in Electrical Engineering. My journey into web development began when I helped create a solar power monitoring application at a startup. Inspired by this experience, I made the decision to transition from electrical engineering to web development and haven't looked back since. I am a driven and diligent problem-solver with a strong interest in continuous learning and self-improvement.",
+    "summary": "Passionate Frontend Engineer with a background in Electrical Engineering. My journey into web development began when I helped create a solar power monitoring application at a startup. Inspired by this experience, I made the decision to transition from electrical engineering to web development and haven't looked back since. I am a driven and diligent problem-solver with a strong interest in continuous learning and self-improvement.",
     "location": {
       "address": "",
       "postalCode": "2200",
@@ -36,13 +36,15 @@
   "work": [
     {
       "name": "Sybo Games",
-      "position": "Senior Frontend Developer",
+      "position": "Senior Frontend Engineer",
       "url": "www.sybogames.com",
       "startDate": "2024-06-01",
       "endDate": null,
       "summary": "Developing web tools to support live operations of games.",
       "highlights": [
-        "Modernized the UI by implementing a custom theme on top of Material UI",
+        "Took full ownership of the frontend implementation of new tools for managing social and competitive features like Friends, Teams, Tournaments and Leaderboards.",
+        "Modernized the UI by implementing a custom layer on top of Material UI",
+        "Added unit testing with Vitest and React Testing Library",
         "Revamped the client-server state synchronization with React Query and Connect RPC"
       ],
       "skills": ["React", "Next.js", "Typescript", "Go"]
@@ -86,14 +88,8 @@
       "position": "Service and R&D Engineer",
       "startDate": "2011-03-01",
       "endDate": "2014-05-01",
-      "summary": "",
-      "highlights": [
-        "Developed Python-based backend solutions to continuously monitor the condition of solar power plants, aggregating extensive datasets and calculating critical performance metrics for failure detection and diagnosis.",
-        "Maintained the SQL database responsible for storing monitored data and plant specifications, ensuring data accuracy and accessibility.",
-        "Successfully commissioned electrical installations and IT systems for power plants, as well as supervised repair activities and conducted routine inspections to guarantee the functionality and safety of power plant operations",
-        "Managed technical documentation and coordinated warranty claims with equipment manufacturers, ensuring timely resolution of issues.",
-        "Took charge of technical customer support, delivering assistance and solutions to meet customer needs."
-      ],
+      "summary": "Comissioned and maintained solar power plants while also developing in-house software solutions to monitor plant performance and reliability. My role encompassed both hands-on technical tasks and software development, allowing me to leverage my engineering background to enhance the efficiency and effectiveness of solar energy systems.",
+      "highlights": [],
       "skills": ["Python", "SQL", "Data Analysis"]
     }
   ],

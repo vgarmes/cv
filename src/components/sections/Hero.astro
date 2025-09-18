@@ -30,8 +30,10 @@ const printInfo = [email, phone, url].filter(Boolean);
     <div
       class="flex flex-col items-center sm:items-start gap-2 pr-0 sm:pr-8 text-center sm:text-start"
     >
-      <h1 class="text-2xl font-bold">{name}</h1>
-      <p class="text-balance">{label}</p>
+      <div>
+        <h1 class="text-2xl font-medium">{name}</h1>
+        <p class="text-balance">{label}</p>
+      </div>
       <a
         class="text-xs text-gray-600 font-mono hover:underline leading-none align-baseline"
         href={locationUrl}

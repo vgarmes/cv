@@ -7,7 +7,7 @@
 
 @layer base {
   p {
-    @apply text-gray-600 text-sm leading-6 text-pretty font-mono;
+    @apply text-gray-600 text-sm text-pretty;
   }
 
   p,
