@@ -25,17 +25,17 @@ const printInfo = [email, phone, url].filter(Boolean);
 
 <Section>
   <div
-    class="flex justify-between gap-4 items-center sm:flex-row sm:items-start flex-col-reverse"
+    class="flex flex-col-reverse items-center justify-between gap-4 sm:flex-row sm:items-start"
   >
     <div
-      class="flex flex-col items-center sm:items-start gap-2 pr-0 sm:pr-8 text-center sm:text-start"
+      class="flex flex-col items-center gap-2 pr-0 text-center sm:items-start sm:pr-8 sm:text-start"
     >
       <div>
         <h1 class="text-2xl font-medium">{name}</h1>
-        <p class="text-balance">{label}</p>
+        <p class="text-base text-balance">{label}</p>
       </div>
       <a
-        class="text-xs text-gray-600 font-mono hover:underline leading-none align-baseline"
+        class="align-baseline font-mono text-xs leading-none text-gray-600 hover:underline"
         href={locationUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -43,7 +43,7 @@ const printInfo = [email, phone, url].filter(Boolean);
         {city}, {region}
       </a>
       <div
-        class="hidden flex-col print:flex print:mt-2 gap-y-1 font-mono text-sm text-gray-600"
+        class="hidden flex-col gap-y-1 font-mono text-sm text-gray-600 print:mt-2 print:flex"
       >
         <a
           href={`mailto:${email}`}
@@ -73,7 +73,7 @@ const printInfo = [email, phone, url].filter(Boolean);
           <span>{url}</span>
         </a>
       </div>
-      <footer class="print:hidden flex gap-x-1 pt-1 font-mono text-sm">
+      <footer class="flex gap-x-1 pt-1 font-mono text-sm print:hidden">
         {
           email && (
             <IconButton link={`mailto:${email}`} title="Email">
@@ -100,7 +100,7 @@ const printInfo = [email, phone, url].filter(Boolean);
         }
       </footer>
     </div>
-    <figure class="relative flex shrink-0 overflow-hidden rounded-xl size-28">
+    <figure class="relative flex size-28 shrink-0 overflow-hidden rounded-xl">
       <img
         class="aspect-square h-full w-full object-cover"
         src={image}

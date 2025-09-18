@@ -6,7 +6,7 @@
     "email": "vgmestre@gmail.com",
     "phone": "+45 24 79 34 48",
     "url": "https://vgarmes.github.io",
-    "summary": "Passionate Frontend Engineer with a background in Electrical Engineering. My journey into web development began when I helped create a solar power monitoring application at a startup. Inspired by this experience, I made the decision to transition from electrical engineering to web development and haven't looked back since. I am a driven and diligent problem-solver with a strong interest in continuous learning and self-improvement.",
+    "summary": "Frontend Engineer with experience building modern applications in cross-functional teams. Specialized in React and Typescript, with a strong focus on creating efficient, user-friendly interfaces. Passionate about learning new technologies and continuously improving my skills to deliver polished software and web experiences.",
     "location": {
       "address": "",
       "postalCode": "2200",
@@ -40,37 +40,38 @@
       "url": "www.sybogames.com",
       "startDate": "2024-06-01",
       "endDate": null,
-      "summary": "Developing web tools to support live operations of games.",
+      "summary": "Owned the frontend implementation of new internal tools for live game operations, collaborating closely with backend and game teams. Delivered high-quality UI aligned with company standards and user needs. Developed features for Subway Surfers—one of the most downloaded games in the world—and other titles.",
       "highlights": [
-        "Took full ownership of the frontend implementation of new tools for managing social and competitive features like Friends, Teams, Tournaments and Leaderboards.",
-        "Modernized the UI by implementing a custom layer on top of Material UI",
-        "Added unit testing with Vitest and React Testing Library",
-        "Revamped the client-server state synchronization with React Query and Connect RPC"
+        "Developed and maintained LiveOps dashboards and tools for game management, including tournaments, leaderboards, notifications, and social features",
+        "Enhanced UI consistency by implementing a custom style layer on top of Material UI",
+        "Introduced unit testing with Vitest and React Testing Library, promoting TDD and code quality",
+        "Improved client-server state management with React Query and Connect-RPC",
+        "Participated in peer code reviews and cross-functional collaboration"
       ],
-      "skills": ["React", "Next.js", "Typescript", "Go"]
+      "skills": ["React", "Next.js", "Typescript", "Vitest", "Material UI"]
     },
     {
       "name": "ComplyCloud",
-      "position": "Frontend Developer",
+      "position": "Frontend & Fullstack Developer",
       "url": "www.complycloud.com",
       "startDate": "2021-12-01",
       "endDate": "2024-05-31",
-      "summary": "Worked on several key features in our web application built with Next.js. Recently, I've transitioned into a full-stack position where I've taken on the responsibility of developing the backend using the .NET framework. This shift has allowed me to take ownership of features from conception to deployment, having full control on the end-to-end functionality. I also led some initiatives to improve the overall performance and developer experience such as:",
+      "summary": "Developed and maintained key features for a Next.js web application, transitioning to fullstack development with .NET. Owned features end-to-end, improved performance, and led developer experience initiatives.",
       "highlights": [
-        "Revamped the client-server state synchronization with React Query.",
-        "Overhauling the authentication on the client side using AWS services.",
-        "Developing a comprehensive library of React styled components aligned with our design system.",
-        "Transitioning email notifications to styled templates to boost customer engagement."
+        "Revamped client-server state synchronization with React Query",
+        "Overhauled authentication using AWS services",
+        "Built a comprehensive React component library from scratch aligned with the design system using styled-components",
+        "Implemented styled email templates to boost engagement",
+        "Introduced end-to-end testing with Playwright, greatly improving the reliability of critical user flows"
       ],
-      "skills": ["React", "Next.js", "Typescript", "C#", ".NET"]
+      "skills": ["React", "Next.js", "Typescript", "Playwright", "C#", ".NET"]
     },
     {
       "name": "Freelance",
       "position": "Front-End Developer",
-      "url": "https://twitch.tv/midudev",
       "startDate": "2020-08-01",
       "endDate": "2021-11-01",
-      "summary": "Collaborated with a local store with their marketing and e-commerce using Adobe Commerce (Magento) as the CMS and CRM, while concurrently expanding my education in web development through relevant courses and bootcamps.",
+      "summary": "Created landing pages for small businesses and expanded web development skills through courses and bootcamps.",
       "highlights": [],
       "skills": []
     },

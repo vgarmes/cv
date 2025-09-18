@@ -25,28 +25,28 @@ import { formatDates } from "@/utils/date";
             <li>
               <article>
                 <header class="flex flex-col space-y-1.5">
-                  <div class="flex flex-col-reverse sm:flex-row sm:items-center justify-between sm:gap-x-2 gap-y-1 text-base">
-                    <h3 class="font-semibold leading-none">
+                  <div class="flex flex-col-reverse justify-between gap-y-1 text-base sm:flex-row sm:items-center sm:gap-x-2">
+                    <h3 class="leading-none font-semibold">
                       <a
                         href={url}
                         title={`See ${name} site`}
                         target="_blank"
-                        class="hover:underline cursor-pointer"
+                        class="cursor-pointer hover:underline"
                       >
                         {name}
                       </a>
                     </h3>
 
-                    <time class="text-xs uppercase tabular-nums text-gray-500">
+                    <time class="text-xs text-gray-500 uppercase tabular-nums">
                       {dates}
                     </time>
                   </div>
                   <h4 class="font-mono text-sm leading-none">{position}</h4>
                 </header>
 
-                <p class="mt-2 text-xs">{summary}</p>
+                <p class="mt-2 text-sm">{summary}</p>
                 {highlights.length > 0 && (
-                  <ul class="text-xs text-gray-600 mt-2 list-disc pl-4">
+                  <ul class="mt-2 list-disc pl-4 text-sm text-gray-600">
                     {highlights.map((highlight) => (
                       <li class="pb-2">{highlight}</li>
                     ))}
