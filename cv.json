@@ -22,11 +22,6 @@
         "url": "https://linkedin.com/in/vgmestre"
       },
       {
-        "network": "X",
-        "username": "vgmestre",
-        "url": "https://x.com/vgmestre"
-      },
-      {
         "network": "GitHub",
         "username": "vgarmes",
         "url": "https://github.com/vgarmes"
@@ -40,13 +35,12 @@
       "url": "www.sybogames.com",
       "startDate": "2024-06-01",
       "endDate": null,
-      "summary": "Owned the frontend implementation of new internal tools for live game operations, collaborating closely with backend and game teams. Delivered high-quality UI aligned with company standards and user needs. Developed features for Subway Surfers—one of the most downloaded games in the world—and other titles.",
+      "summary": "Owned the frontend implementation of new internal tools for live game operations, collaborating closely with game, marketing, customer support, and backend teams. Delivered high-quality UI aligned with company standards and user needs. Developed features for Subway Surfers—one of the most downloaded games in the world—and other titles.",
       "highlights": [
         "Developed and maintained LiveOps dashboards and tools for game management, including tournaments, leaderboards, notifications, and social features",
         "Enhanced UI consistency by implementing a custom style layer on top of Material UI",
         "Introduced unit testing with Vitest and React Testing Library, promoting TDD and code quality",
-        "Improved client-server state management with React Query and Connect-RPC",
-        "Participated in peer code reviews and cross-functional collaboration"
+        "Improved client-server state management with TanStack Query and Connect-RPC"
       ],
       "skills": ["React", "Next.js", "Typescript", "Vitest", "Material UI"]
     },
@@ -56,15 +50,15 @@
       "url": "www.complycloud.com",
       "startDate": "2021-12-01",
       "endDate": "2024-05-31",
-      "summary": "Developed and maintained key features for a Next.js web application, transitioning to fullstack development with .NET. Owned features end-to-end, improved performance, and led developer experience initiatives.",
+      "summary": "Developed key features for a SaaS platform, collaborating closely with product, design, and backend teams. Delivered scalable solutions and improved developer experience through modern workflows and best practices.",
       "highlights": [
-        "Revamped client-server state synchronization with React Query",
-        "Overhauled authentication using AWS services",
-        "Built a comprehensive React component library from scratch aligned with the design system using styled-components",
-        "Implemented styled email templates to boost engagement",
-        "Introduced end-to-end testing with Playwright, greatly improving the reliability of critical user flows"
+        "Led the redesign and implementation of core platform features using React, Next.js, and TypeScript",
+        "Built and maintained a reusable component library, driving design system adoption across teams",
+        "Improved authentication and security by integrating AWS Cognito",
+        "Optimized client-server state management with TanStack Query, enhancing performance and reliability",
+        "Created styled email templates to increase user engagement and retention"
       ],
-      "skills": ["React", "Next.js", "Typescript", "Playwright", "C#", ".NET"]
+      "skills": ["React", "Next.js", "TypeScript", "C#", ".NET"]
     },
     {
       "name": "Freelance",
@@ -89,7 +83,7 @@
       "position": "Service and R&D Engineer",
       "startDate": "2011-03-01",
       "endDate": "2014-05-01",
-      "summary": "Comissioned and maintained solar power plants while also developing in-house software solutions to monitor plant performance and reliability. My role encompassed both hands-on technical tasks and software development, allowing me to leverage my engineering background to enhance the efficiency and effectiveness of solar energy systems.",
+      "summary": "Comissioned and maintained solar power plants while also developing in-house software solutions in Python to analyze and monitor plant performance and reliability.",
       "highlights": [],
       "skills": ["Python", "SQL", "Data Analysis"]
     }
@@ -258,7 +252,7 @@
   "projects": [
     {
       "name": "Game Lib",
-      "isActive": true,
+      "isActive": false,
       "description": "A web app I made to keep track of my videogame collection",
       "highlights": ["Next.js", "next-auth", "tRPC"],
       "url": "https://game-lib.vercel.app/",
@@ -266,7 +260,7 @@
     },
     {
       "name": "My Steam",
-      "isActive": true,
+      "isActive": false,
       "description": "An API of your Steam statistics easily deployable to a Cloudflare Worker.",
       "highlights": ["Cloudflare Workers", "Hono", "Node.js"],
       "url": "https://github.com/vgarmes/my-steam",
@@ -274,8 +268,8 @@
     },
     {
       "name": "Markdown Editor",
-      "isActive": true,
-      "description": "A markdown editor written made with Electron",
+      "isActive": false,
+      "description": "A markdown editor made with Electron and Vite.",
       "highlights": ["Electron", "Vite", "React"],
       "url": "https://github.com/vgarmes/markdown-editor",
       "github": ""

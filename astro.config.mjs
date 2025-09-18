@@ -12,7 +12,7 @@ export default defineConfig({
         provider: fontProviders.google(),
         name: "Geist",
         cssVariable: "--font-geist",
-        weights: ["400 500"],
+        weights: ["400 500 600"],
         subsets: ["latin"],
       },
       {
