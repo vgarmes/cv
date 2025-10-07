@@ -37,16 +37,14 @@ import { formatDates } from "@/utils/date";
                       </a>
                     </h3>
 
-                    <time class="text-xs text-gray-500 uppercase tabular-nums">
-                      {dates}
-                    </time>
+                    <time class="text-muted-foreground text-sm">{dates}</time>
                   </div>
-                  <h4 class="font-mono text-sm leading-none">{position}</h4>
+                  <h4 class="text-muted-foreground leading-none">{position}</h4>
                 </header>
 
                 <p class="mt-2 text-sm">{summary}</p>
                 {highlights.length > 0 && (
-                  <ul class="mt-2 list-disc pl-4 text-sm text-gray-600">
+                  <ul class="text-muted-foreground mt-2 list-disc pl-4 text-sm">
                     {highlights.map((highlight) => (
                       <li class="pb-2">{highlight}</li>
                     ))}

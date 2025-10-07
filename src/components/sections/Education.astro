@@ -1,39 +1,35 @@
 ---
 import Section from "@/components/Section.astro";
-import { formatDates } from "@/utils/date";
+import { formatDatesOnlyYear } from "@/utils/date";
 import { education } from "@cv";
 ---
 
 <Section title="Education">
   <div class="flex flex-col gap-8">
     {
-      education.map(
-        ({ institution, area, studyType, startDate, endDate, url }) => {
-          const dates = formatDates(startDate, endDate);
-          return (
-            <article>
-              <header class="flex flex-col space-y-1.5">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-y-1 gap-x-2 text-base">
-                  <h3 class="font-semibold leading-none">{area}</h3>
-                  <time class="text-xs uppercase tabular-nums text-gray-500">
-                    {dates}
-                  </time>
-                </div>
-                <h4 class="font-mono text-sm leading-none">
-                  <a
-                    href={url}
-                    title={`See ${institution}`}
-                    target="_blank"
-                    class="hover:underline"
-                  >
-                    {institution}
-                  </a>
-                </h4>
-              </header>
-            </article>
-          );
-        },
-      )
+      education.map(({ institution, area, startDate, endDate, url }) => {
+        const dates = formatDatesOnlyYear(startDate, endDate);
+        return (
+          <article>
+            <header class="flex flex-col space-y-1.5">
+              <div class="flex flex-col justify-between gap-x-2 gap-y-1 text-base sm:flex-row sm:items-center">
+                <h3 class="leading-none font-semibold">{area}</h3>
+                <time class="text-muted-foreground text-sm">{dates}</time>
+              </div>
+              <h4 class="text-muted-foreground leading-none">
+                <a
+                  href={url}
+                  title={`See ${institution}`}
+                  target="_blank"
+                  class="hover:underline"
+                >
+                  {institution}
+                </a>
+              </h4>
+            </header>
+          </article>
+        );
+      })
     }
   </div>
 </Section>
